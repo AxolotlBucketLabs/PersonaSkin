@@ -42,6 +42,10 @@ jobs:
           INPUT_INSTALL-PATH: ./.php-bin
         run: node "$GITHUB_WORKSPACE/.devtools-dependencies/setup-php-action/dist/index.js"
 
+      - name: Install Axolotl-PM dependencies
+        shell: bash
+        run: composer install --working-dir=.devtools-dependencies/axolotl-pm --no-dev --prefer-dist --no-interaction --no-progress --no-scripts --no-plugins --ignore-platform-reqs
+
       - name: Lint PHP sources
         shell: bash
         run: find src tests -name '*.php' -print0 | xargs -0 -n1 php -l
