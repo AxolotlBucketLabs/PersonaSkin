@@ -1,0 +1,67 @@
+name: PersonaSkin CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Lint, regression test, PHPStan max and build PHAR
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out plugin source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Check out Axolotl-PM source for PHPStan and smoke tests
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: axolotl-pm/PocketMine-MP
+          ref: stable
+          path: .devtools-dependencies/axolotl-pm
+          persist-credentials: false
+
+      - name: Check out Axolotl-PM PHP setup helper
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: axolotl-pm/setup-php-action
+          ref: b8c3f9add4f2ad4a5e2624a1112aba899ee8db0e
+          path: .devtools-dependencies/setup-php-action
+          persist-credentials: false
+
+      - name: Set up PHP 8.4 for Axolotl-PM
+        shell: bash
+        env:
+          INPUT_PHP-VERSION: "8.4"
+          INPUT_PM-VERSION-MAJOR: "5"
+          INPUT_INSTALL-PATH: ./.php-bin
+        run: node "$GITHUB_WORKSPACE/.devtools-dependencies/setup-php-action/dist/index.js"
+
+      - name: Lint PHP sources
+        shell: bash
+        run: find src tests -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Run adapter regression smoke test
+        run: php tests/skin-adapter-smoke.php .devtools-dependencies/axolotl-pm
+
+      - name: Build and analyze PHAR with DevTools
+        id: build
+        uses: NhanAZ/DevTools@8b7db655845dc5d9e5e51b26a5d0815d5f7e5323 # v2.1.1
+        with:
+          project: .
+          output: build
+          phpstan: max
+          phpstan-server: .devtools-dependencies/axolotl-pm
+
+      - name: Verify built PHAR
+        shell: bash
+        env:
+          PHAR_PATH: ${{ steps.build.outputs.phar }}
+        run: |
+          test -f "$PHAR_PATH"
+          php -r '$p = new Phar($argv[1]); $manifest = $p["plugin.yml"]->getContent(); if (strpos($manifest, "name: PersonaSkin") === false || strpos($manifest, "main: kim\\present\\personaskin\\Main") === false || strpos($manifest, "version: 1.3.3") === false) { exit(1); }' "$PHAR_PATH"
