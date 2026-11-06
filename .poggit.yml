@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/NhanAZ-Plugins/PersonaSkin
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/AxolotlBucketLabs/PersonaSkin
 build-by-default: true
 branches:
   - main

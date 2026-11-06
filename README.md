@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="https://raw.githubusercontent.com/NhanAZ-Plugins/PersonaSkin/main/assets/icon.png" alt="Logo" width="80" height="80">
+  <img src="https://raw.githubusercontent.com/AxolotlBucketLabs/PersonaSkin/main/assets/icon.png" alt="Logo" width="80" height="80">
   <h3>PersonaSkin</h3>
   <p align="center">
     An plugin that shows persona skins made with the Character Creator correctly!
@@ -47,7 +47,7 @@ in [Bedrock_Edition_1.13.0](https://minecraft.gamepedia.com/Bedrock_Edition_1.13
 
 This fork supports API 5 servers based on [`Axolotl-PM`](https://github.com/axolotl-pm/PocketMine-MP), while retaining compatibility with the corresponding PocketMine-MP API.
 
-The fork is maintained by NhanAZ-Plugins. The original implementation and LGPL-3.0 license belong to PresentKim.
+The fork is maintained by AxolotlBucketLabs. The original implementation and LGPL-3.0 license belong to PresentKim.
 
 ##
 
@@ -89,32 +89,32 @@ Distributed under the **LGPL 3.0**. See [LICENSE][license-url] for more informat
 
 [author-discord]: https://discordapp.com/users/345772340279508993
 
-[poggit-ci-badge]: https://poggit.pmmp.io/ci.shield/NhanAZ-Plugins/PersonaSkin/PersonaSkin?style=for-the-badge
+[poggit-ci-badge]: https://poggit.pmmp.io/ci.shield/AxolotlBucketLabs/PersonaSkin/PersonaSkin?style=for-the-badge
 
 [poggit-version-badge]: https://poggit.pmmp.io/shield.api/PersonaSkin?style=for-the-badge
 
 [poggit-downloads-badge]: https://poggit.pmmp.io/shield.dl.total/PersonaSkin?style=for-the-badge
 
-[version-badge]: https://img.shields.io/github/v/release/NhanAZ-Plugins/PersonaSkin?display_name=tag&style=for-the-badge&label=VERSION
+[version-badge]: https://img.shields.io/github/v/release/AxolotlBucketLabs/PersonaSkin?display_name=tag&style=for-the-badge&label=VERSION
 
-[release-badge]: https://img.shields.io/github/downloads/NhanAZ-Plugins/PersonaSkin/total?style=for-the-badge&label=GITHUB%20
+[release-badge]: https://img.shields.io/github/downloads/AxolotlBucketLabs/PersonaSkin/total?style=for-the-badge&label=GITHUB%20
 
-[stars-badge]: https://img.shields.io/github/stars/NhanAZ-Plugins/PersonaSkin.svg?style=for-the-badge
+[stars-badge]: https://img.shields.io/github/stars/AxolotlBucketLabs/PersonaSkin.svg?style=for-the-badge
 
-[license-badge]: https://img.shields.io/github/license/NhanAZ-Plugins/PersonaSkin.svg?style=for-the-badge
+[license-badge]: https://img.shields.io/github/license/AxolotlBucketLabs/PersonaSkin.svg?style=for-the-badge
 
-[poggit-ci-url]: https://poggit.pmmp.io/ci/NhanAZ-Plugins/PersonaSkin/PersonaSkin
+[poggit-ci-url]: https://poggit.pmmp.io/ci/AxolotlBucketLabs/PersonaSkin/PersonaSkin
 
 [poggit-release-url]: https://poggit.pmmp.io/p/PersonaSkin
 
-[stars-url]: https://github.com/NhanAZ-Plugins/PersonaSkin/stargazers
+[stars-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/stargazers
 
-[releases-url]: https://github.com/NhanAZ-Plugins/PersonaSkin/releases
+[releases-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/releases
 
-[issues-url]: https://github.com/NhanAZ-Plugins/PersonaSkin/issues
+[issues-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/issues
 
-[license-url]: https://github.com/NhanAZ-Plugins/PersonaSkin/blob/main/LICENSE
+[license-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/blob/main/LICENSE
 
-[project-icon]: https://raw.githubusercontent.com/NhanAZ-Plugins/PersonaSkin/main/assets/icon.png
+[project-icon]: https://raw.githubusercontent.com/AxolotlBucketLabs/PersonaSkin/main/assets/icon.png
 
-[project-preview]: https://raw.githubusercontent.com/NhanAZ-Plugins/PersonaSkin/main/assets/preview.gif
+[project-preview]: https://raw.githubusercontent.com/AxolotlBucketLabs/PersonaSkin/main/assets/preview.gif
