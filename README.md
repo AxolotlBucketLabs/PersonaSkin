@@ -1,120 +1,31 @@
-<!-- PROJECT BADGES -->
-<div align="center">
+# PersonaSkin
 
-![Version][version-badge]
-[![Stars][stars-badge]][stars-url]
-[![License][license-badge]][license-url]
+PersonaSkin is a PocketMine-MP and Axolotl-PM plugin that renders Bedrock persona skins created with Character Creator instead of showing the random-color fallback.
 
-</div>
+[![CI](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml/badge.svg)](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml) [![License](https://img.shields.io/github/license/AxolotlBucketLabs/PersonaSkin)](LICENSE) [![Discord](https://img.shields.io/discord/986553214889517088?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/j2X83ujT6c)
 
+## Compatibility
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <img src="https://raw.githubusercontent.com/AxolotlBucketLabs/PersonaSkin/main/assets/icon.png" alt="Logo" width="80" height="80">
-  <h3>PersonaSkin</h3>
-  <p align="center">
-    An plugin that shows persona skins made with the Character Creator correctly!
-
-[Contact to me][author-discord] · [Report a bug][issues-url] · [Request a feature][issues-url]
-
-  </p>
-</div>
-
-
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-![Project Preview][project-preview]
-<br> ✔️ Support for persona skin (it created via character creators)!
-<br> ✔️ Now you don't have to see a skin filled with random colors!
-
-#### :question: What is a **persona skin**?
-
-**Persona skin** is a new format of skin created via the [**character creator
-**](https://minecraft.gamepedia.com/Character_creator)  
-It was added
-in [Bedrock_Edition_1.13.0](https://minecraft.gamepedia.com/Bedrock_Edition_1.13.0) [(released on October 29, 2019)](https://feedback.minecraft.net/hc/en-us/articles/360035247792)
-
-- PMMP does not support this skin format, and makes it show as a skin filled with random colors.
-
-##
-
------
-
-## Target software:
-
-This fork supports API 5 servers based on [`Axolotl-PM`](https://github.com/axolotl-pm/PocketMine-MP), while retaining compatibility with the corresponding PocketMine-MP API.
-
-The fork is maintained by AxolotlBucketLabs. The original implementation and LGPL-3.0 license belong to PresentKim.
-
-##
-
------
-
-## Downloads
-
-### Download from [Github Releases][releases-url]
-
-[![Github Downloads][release-badge]][releases-url]
-
-###
-
-### Download from [Poggit Releases][poggit-release-url]
-
-[![Poggit Downloads][poggit-downloads-badge]][poggit-release-url]
-
-##
-
------
+- The plugin manifest targets PocketMine-MP and Axolotl-PM API 5.
+- CI runs PHP lint, the persona-skin adapter smoke test, PHPStan at level max, and a DevTools PHAR build against the current Axolotl-PM source.
+- The plugin keeps the original `kim\present\personaskin` namespace and `PresentKim` attribution.
 
 ## Installation
 
-1) Download plugin `.phar` releases
-2) Move downloaded `.phar` file to server's **/plugins/** folder
-3) Restart the server
+1. Download a `PersonaSkin.phar` artifact from a GitHub release or a successful [CI run](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml).
+2. Copy the PHAR to the server's `plugins/` directory.
+3. Restart the server.
 
-##
+The release workflow packages tags that start with `v`. Test a CI artifact on the target server before using it in production.
 
------
+## Development
 
-## License
+The repository uses [AxolotlBucketLabs DevTools](https://github.com/AxolotlBucketLabs/DevTools) for PHAR packaging and PHPStan analysis. The adapter smoke test runs with a checked-out Axolotl-PM source tree.
 
-Distributed under the **LGPL 3.0**. See [LICENSE][license-url] for more information
+## Support
 
-##
+Report reproducible bugs and feature requests in the [issue tracker](https://github.com/AxolotlBucketLabs/PersonaSkin/issues). Include the server version, plugin version, client version, and a log excerpt when the problem produces an error.
 
------
+## License and attribution
 
-[author-discord]: https://discordapp.com/users/345772340279508993
-
-[poggit-ci-badge]: https://poggit.pmmp.io/ci.shield/AxolotlBucketLabs/PersonaSkin/PersonaSkin?style=for-the-badge
-
-[poggit-version-badge]: https://poggit.pmmp.io/shield.api/PersonaSkin?style=for-the-badge
-
-[poggit-downloads-badge]: https://poggit.pmmp.io/shield.dl.total/PersonaSkin?style=for-the-badge
-
-[version-badge]: https://img.shields.io/github/v/release/AxolotlBucketLabs/PersonaSkin?display_name=tag&style=for-the-badge&label=VERSION
-
-[release-badge]: https://img.shields.io/github/downloads/AxolotlBucketLabs/PersonaSkin/total?style=for-the-badge&label=GITHUB%20
-
-[stars-badge]: https://img.shields.io/github/stars/AxolotlBucketLabs/PersonaSkin.svg?style=for-the-badge
-
-[license-badge]: https://img.shields.io/github/license/AxolotlBucketLabs/PersonaSkin.svg?style=for-the-badge
-
-[poggit-ci-url]: https://poggit.pmmp.io/ci/AxolotlBucketLabs/PersonaSkin/PersonaSkin
-
-[poggit-release-url]: https://poggit.pmmp.io/p/PersonaSkin
-
-[stars-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/stargazers
-
-[releases-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/releases
-
-[issues-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/issues
-
-[license-url]: https://github.com/AxolotlBucketLabs/PersonaSkin/blob/main/LICENSE
-
-[project-icon]: https://raw.githubusercontent.com/AxolotlBucketLabs/PersonaSkin/main/assets/icon.png
-
-[project-preview]: https://raw.githubusercontent.com/AxolotlBucketLabs/PersonaSkin/main/assets/preview.gif
+PersonaSkin is distributed under the GNU Lesser General Public License version 3. The original implementation and license remain attributed to PresentKim. See [LICENSE](LICENSE) for the complete terms.
