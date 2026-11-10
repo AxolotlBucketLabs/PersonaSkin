@@ -10,6 +10,6 @@ permissions:
 
 jobs:
   release:
-    uses: AxolotlBucketLabs/DevTools/.github/workflows/release-plugin.yml@v4.0.0 # v4.0.0
+    uses: AxolotlBucketLabs/DevTools/.github/workflows/release-plugin.yml@latest # v4.0.0
     with:
       mode: tag
