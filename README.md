@@ -7,7 +7,7 @@ PersonaSkin is a PocketMine-MP and Axolotl-PM plugin that renders Bedrock person
 ## Compatibility
 
 - The plugin manifest targets PocketMine-MP and Axolotl-PM API 5.
-- CI uses DevTools `v4.1.1` for PHPStan level max and PHAR builds. It also runs PHP lint and the persona-skin adapter smoke test against the current Axolotl-PM source.
+- CI uses DevTools `v4.1.2` for PHPStan level max and PHAR builds. It also runs PHP lint and the persona-skin adapter smoke test against the current Axolotl-PM source.
 - The plugin keeps the original `kim\present\personaskin` namespace and `PresentKim` attribution.
 
 ## Installation
