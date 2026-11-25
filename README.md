@@ -2,12 +2,12 @@
 
 PersonaSkin is a PocketMine-MP and Axolotl-PM plugin that renders Bedrock persona skins created with Character Creator instead of showing the random-color fallback.
 
-[![CI](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml/badge.svg)](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml) [![License](https://img.shields.io/github/license/AxolotlBucketLabs/PersonaSkin)](LICENSE) [![Discord](https://img.shields.io/discord/1568295845374206052?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/Pk4FrNvHnM)
+[![CI](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml/badge.svg)](https://github.com/AxolotlBucketLabs/PersonaSkin/actions/workflows/ci.yml) [![Latest release](https://img.shields.io/github/v/release/AxolotlBucketLabs/PersonaSkin)](https://github.com/AxolotlBucketLabs/PersonaSkin/releases/latest) [![License](https://img.shields.io/github/license/AxolotlBucketLabs/PersonaSkin)](LICENSE) [![Discord](https://img.shields.io/discord/1568295845374206052?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/Pk4FrNvHnM)
 
 ## Compatibility
 
 - The plugin manifest targets PocketMine-MP and Axolotl-PM API 5.
-- CI runs PHP lint, the persona-skin adapter smoke test, PHPStan at level max, and a DevTools PHAR build against the current Axolotl-PM source.
+- CI uses DevTools `v4.1.1` for PHPStan level max and PHAR builds. It also runs PHP lint and the persona-skin adapter smoke test against the current Axolotl-PM source.
 - The plugin keeps the original `kim\present\personaskin` namespace and `PresentKim` attribution.
 
 ## Installation
